@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Sign up Page</title>
+        <style>
+            body{
+                background: url("resource/images/wp2655697.jpg");                
+                background-size: cover;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <ui:insert>
+            <ui:include src="/menu.xhtml"/>
+        </ui:insert>
+        <center>
+            <h:form>
+                <p:panelGrid columns="2">
+                    <f:facet name="header">
+                        <h2>Registration Form </h2>
+                    </f:facet>
+                    <h:outputLabel value="Name" />
+                    <p:inputText value="#{user.name}"/>
+                    
+                    <h:outputLabel value="Father's Name" />
+                    <p:inputText value="#{user.FName}"/>
+                    
+                    <h:outputLabel value="Mother's Name" />
+                    <p:inputText value="#{user.MName}"/>
+                    
+                    <h:outputLabel value="Address" />
+                    <p:inputText value="#{user.address}"/>
+                    
+                    <h:outputLabel value="City" />
+                    <p:autoComplete value="#{user.city}" completeMethod="#{user.citys(city)}" effect="blind"/>
+                    
+                    <h:outputLabel value="Country" />
+                    <p:inputText value="#{user.country}"/>
+                    
+                    <h:outputLabel value="Mobile" />
+                    <p:inputText value="#{user.mobile}"/>
+                    
+                    <h:outputLabel value="Email" />
+                    <p:inputText value="#{user.email}"/>
+                    
+                    <h:outputLabel value="Date of Birth" />
+                    <p:calendar pattern="yyyy-mm-dd" value="#{user.dateOfBirth}"/>
+                    
+                    <h:outputLabel value="National ID" />
+                    <p:inputText value="#{user.nid}"/>
+                    
+                    <h:outputLabel value="Gender" />
+                    <h:selectOneRadio layout="lineDirection" value="#{user.gender}">
+                        <f:selectItems value="#{user.genders}"></f:selectItems>
+                    </h:selectOneRadio>
+                    
+                    <h:outputLabel value="Religion" />
+                    <p:inputText value="#{user.religion}"/>
+                    
+                    <h:outputLabel value="Occupation" />
+                    <p:inputText value="#{user.occupation}"/>
+                    
+                    <h:outputLabel value="Type of User" />
+                    <p:inputText value="#{user.typeOfUser}"/>
+                    
+                    <h:outputLabel value="User Name" />
+                    <p:inputText value="#{user.userName}"/>
+                    
+                    <h:outputLabel value="Password" />
+                    <p:inputText value="#{user.password}"/>
+                    
+                    <p:commandButton type="submit" value="Save" action="#{user.addUser()}" />
+                    <p:commandButton type="reset" value="Reset" />
+                </p:panelGrid>
+            </h:form>
+        </center>
+        
+    </h:body>
+</html>
+

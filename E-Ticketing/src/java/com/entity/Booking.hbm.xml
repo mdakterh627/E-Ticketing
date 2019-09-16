@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2019 8:57:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.entity.Booking" table="booking" catalog="project" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="60" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="60" />
+        </property>
+        <property name="leavingFrom" type="string">
+            <column name="Leaving_From" length="60" />
+        </property>
+        <property name="goingTo" type="string">
+            <column name="Going_To" length="60" />
+        </property>
+        <property name="bookingDate" type="date">
+            <column name="Booking_Date" length="10" />
+        </property>
+        <property name="travelDate" type="date">
+            <column name="Travel_Date" length="10" />
+        </property>
+        <property name="seat" type="string">
+            <column name="Seat" length="60" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <property name="totalPrice" type="java.lang.Double">
+            <column name="Total_Price" precision="22" scale="0" />
+        </property>
+        <property name="comment" type="string">
+            <column name="Comment" length="80" />
+        </property>
+    </class>
+</hibernate-mapping>

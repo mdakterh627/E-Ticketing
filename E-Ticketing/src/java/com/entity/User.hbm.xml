@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2019 8:57:10 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.entity.User" table="user" catalog="project" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" length="60" />
+        </property>
+        <property name="FName" type="string">
+            <column name="F_Name" length="60" />
+        </property>
+        <property name="MName" type="string">
+            <column name="M_Name" length="60" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="60" />
+        </property>
+        <property name="mobile" type="java.lang.Integer">
+            <column name="Mobile" />
+        </property>
+        <property name="email" type="string">
+            <column name="Email" length="60" />
+        </property>
+        <property name="gender" type="string">
+            <column name="Gender" length="60" />
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="Date_of_Birth" length="10" />
+        </property>
+        <property name="nid" type="string">
+            <column name="NID" length="60" />
+        </property>
+        <property name="religion" type="string">
+            <column name="Religion" length="60" />
+        </property>
+        <property name="occupation" type="string">
+            <column name="Occupation" length="60" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="60" />
+        </property>
+        <property name="country" type="string">
+            <column name="Country" length="60" />
+        </property>
+        <property name="typeOfUser" type="string">
+            <column name="Type_of_User" length="60" />
+        </property>
+        <property name="userName" type="string">
+            <column name="User_name" length="60" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="60" />
+        </property>
+    </class>
+</hibernate-mapping>

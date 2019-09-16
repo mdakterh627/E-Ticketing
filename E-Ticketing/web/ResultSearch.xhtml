@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <title>Search Result</title>
+            <style>
+                body{
+                    background: url("resource/images/wp2655666.jpg");                
+                    background-size: cover;
+                }
+               
+            </style>
+        </h:head>
+        <h:body>
+            <ui:insert>
+                <ui:include src="/menu.xhtml"/>
+            </ui:insert>
+            <center>
+                <h:form>
+                   
+                    <p:panelGrid columns="7">
+
+
+                        <f:facet name="header">
+                            <h1>Your Booked These Coach.</h1>
+                        </f:facet>
+
+
+
+
+                        <h:outputLabel value="Origination" />
+                        <h:outputLabel value="Depart date" />
+                        <h:outputLabel value="Depart time" />
+                        <h:outputLabel value="Destination" />
+                        <h:outputLabel value="Return date" />
+                        <h:outputLabel value="Return time" />
+                        <h:outputLabel value="Coach type" />
+
+                        <h:outputText value="#{flight.origination}"/>
+                        <h:outputText value="#{flight.departDate}"/>
+                        <h:outputText value="#{flight.departTime}"/>
+                        <h:outputText value="#{flight.destination}"/>
+                        <h:outputText value="#{flight.returnDate}"/>
+                        <h:outputText value="#{flight.returnTime}"/>
+                        <h:outputText value="#{flight.tripTypes}"/>
+
+                        <f:facet name="footer">
+                            <h4 style="text-align: center"> Have a nice journey. </h4> 
+                        </f:facet>
+
+                    </p:panelGrid>
+                </h:form>
+            </center>
+        </h:body>
+
+    </f:view>
+</html>
+
